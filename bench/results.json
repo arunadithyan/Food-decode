@@ -1,0 +1,2921 @@
+{
+ "runAt": "2026-11-07T07:03:08.581Z",
+ "node": "v22.23.4",
+ "server": "http://127.0.0.1:8765",
+ "aggregate": {
+  "v1": {
+   "labels": 22,
+   "fieldAccuracy": 0.23497267759562843,
+   "fieldsCorrect": 43,
+   "fieldsTotal": 183,
+   "wrongWhenRead": 0.5057471264367817,
+   "unitAccuracy": 0.45,
+   "servingAccuracy": 0.1111111111111111,
+   "servingLabels": 18,
+   "cer": 0.4160485336081318,
+   "wer": 0.7658700839151642,
+   "medianMs": 1002,
+   "totalMs": 25565,
+   "perfectLabels": 0
+  },
+  "variant:base": {
+   "labels": 22,
+   "fieldAccuracy": 0.24043715846994534,
+   "fieldsCorrect": 44,
+   "fieldsTotal": 183,
+   "wrongWhenRead": 0.44999999999999996,
+   "unitAccuracy": 0.6842105263157895,
+   "servingAccuracy": 0.1111111111111111,
+   "servingLabels": 18,
+   "cer": 0.4199051664874519,
+   "wer": 0.776337451375608,
+   "medianMs": 1339,
+   "totalMs": 35831,
+   "perfectLabels": 1
+  },
+  "variant:adaptive": {
+   "labels": 22,
+   "fieldAccuracy": 0.2185792349726776,
+   "fieldsCorrect": 40,
+   "fieldsTotal": 183,
+   "wrongWhenRead": 0.5652173913043479,
+   "unitAccuracy": 0.5,
+   "servingAccuracy": 0.16666666666666666,
+   "servingLabels": 18,
+   "cer": 0.4226757402899725,
+   "wer": 0.8081999084317186,
+   "medianMs": 879,
+   "totalMs": 28312,
+   "perfectLabels": 0
+  },
+  "variant:sharpened": {
+   "labels": 22,
+   "fieldAccuracy": 0.22404371584699453,
+   "fieldsCorrect": 41,
+   "fieldsTotal": 183,
+   "wrongWhenRead": 0.4810126582278481,
+   "unitAccuracy": 0.6666666666666666,
+   "servingAccuracy": 0.16666666666666666,
+   "servingLabels": 18,
+   "cer": 0.4462096828438197,
+   "wer": 0.7989040036117762,
+   "medianMs": 1314,
+   "totalMs": 38598,
+   "perfectLabels": 0
+  },
+  "v2device": {
+   "labels": 22,
+   "fieldAccuracy": 0.26229508196721313,
+   "fieldsCorrect": 48,
+   "fieldsTotal": 183,
+   "wrongWhenRead": 0.5,
+   "unitAccuracy": 0.5789473684210527,
+   "servingAccuracy": 0.16666666666666666,
+   "servingLabels": 18,
+   "cer": 0.391320265813461,
+   "wer": 0.758971281218625,
+   "medianMs": 4552,
+   "totalMs": 171815,
+   "perfectLabels": 1
+  },
+  "v2server": {
+   "labels": 22,
+   "fieldAccuracy": 0.73224043715847,
+   "fieldsCorrect": 134,
+   "fieldsTotal": 183,
+   "wrongWhenRead": 0.15189873417721522,
+   "unitAccuracy": 0.8918918918918919,
+   "servingAccuracy": 0.4444444444444444,
+   "servingLabels": 18,
+   "cer": 0.2237888571869001,
+   "wer": 0.6404648525521242,
+   "medianMs": 2210,
+   "totalMs": 63679,
+   "perfectLabels": 4
+  },
+  "variant:inverted": {
+   "labels": 6,
+   "fieldAccuracy": 0.3181818181818182,
+   "fieldsCorrect": 14,
+   "fieldsTotal": 44,
+   "wrongWhenRead": 0.41666666666666663,
+   "unitAccuracy": 0.8571428571428571,
+   "servingAccuracy": 0,
+   "servingLabels": 4,
+   "cer": 0.3851845070639189,
+   "wer": 0.781929033460553,
+   "medianMs": 1592,
+   "totalMs": 14310,
+   "perfectLabels": 1
+  }
+ },
+ "rows": [
+  {
+   "file": "7622202225512_nutrition.jpg",
+   "product": "Oreo Original",
+   "condition": "crumpled glossy wrapper, teal banded rows, two-panel table",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 483)",
+      "addedSugarG: — (truth 38.5)",
+      "totalFatG: — (truth 19.6)",
+      "saturatedFatG: — (truth 9.7)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 420)",
+      "proteinG: — (truth 5.2)",
+      "carbohydratesG: — (truth 71.9)",
+      "sugarsG: — (truth 38.9)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7975460122699386,
+     "wer": 1.25,
+     "ms": 901
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 483)",
+      "addedSugarG: — (truth 38.5)",
+      "totalFatG: — (truth 19.6)",
+      "saturatedFatG: — (truth 9.7)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 420)",
+      "proteinG: — (truth 5.2)",
+      "carbohydratesG: — (truth 71.9)",
+      "sugarsG: — (truth 38.9)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7024539877300614,
+     "wer": 1.21875,
+     "ms": 1339
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 483)",
+      "addedSugarG: — (truth 38.5)",
+      "totalFatG: — (truth 19.6)",
+      "saturatedFatG: 9 (truth 9.7)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 420)",
+      "proteinG: — (truth 5.2)",
+      "carbohydratesG: — (truth 71.9)",
+      "sugarsG: — (truth 38.9)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7484662576687117,
+     "wer": 1.28125,
+     "ms": 1148
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 483)",
+      "addedSugarG: — (truth 38.5)",
+      "totalFatG: — (truth 19.6)",
+      "saturatedFatG: — (truth 9.7)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 420)",
+      "proteinG: — (truth 5.2)",
+      "carbohydratesG: — (truth 71.9)",
+      "sugarsG: — (truth 38.9)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.696319018404908,
+     "wer": 1.171875,
+     "ms": 1589
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 483)",
+      "addedSugarG: — (truth 38.5)",
+      "totalFatG: — (truth 19.6)",
+      "saturatedFatG: 9 (truth 9.7)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 420)",
+      "proteinG: — (truth 5.2)",
+      "carbohydratesG: — (truth 71.9)",
+      "sugarsG: — (truth 38.9)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7484662576687117,
+     "wer": 1.28125,
+     "ms": 8335
+    },
+    "v2server": {
+     "fieldsCorrect": 6,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "totalFatG: — (truth 19.6)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 420)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.7331288343558282,
+     "wer": 0.953125,
+     "ms": 2635
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(0f/1e), adaptive(1f/0e), sharpened(0f/1e), rot90(0f/1e), rot270(0f/1e), rot180(0f/1e)",
+    "v2server": "chose base; tried color(5f/2e), base(6f/0e)"
+   }
+  },
+  {
+   "file": "8901058015171_nutrition.jpg",
+   "product": "Nestle KitKat",
+   "condition": "blurry, low light, grey on red",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 438)",
+      "proteinG: — (truth 6.4)",
+      "carbohydratesG: — (truth 47.4)",
+      "sugarsG: — (truth 35.1)",
+      "addedSugarG: — (truth 28.9)",
+      "totalFatG: — (truth 24.8)",
+      "saturatedFatG: — (truth 24.5)",
+      "transFatG: — (truth 0.04)",
+      "sodiumMg: 10.7 (truth 97.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.6620689655172414,
+     "wer": 1.0545454545454545,
+     "ms": 625
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 438)",
+      "proteinG: — (truth 6.4)",
+      "carbohydratesG: — (truth 47.4)",
+      "sugarsG: — (truth 35.1)",
+      "addedSugarG: — (truth 28.9)",
+      "totalFatG: — (truth 24.8)",
+      "saturatedFatG: — (truth 24.5)",
+      "transFatG: — (truth 0.04)",
+      "sodiumMg: — (truth 97.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6310344827586207,
+     "wer": 0.9090909090909091,
+     "ms": 1190
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 438)",
+      "proteinG: — (truth 6.4)",
+      "carbohydratesG: — (truth 47.4)",
+      "sugarsG: — (truth 35.1)",
+      "addedSugarG: — (truth 28.9)",
+      "totalFatG: — (truth 24.8)",
+      "saturatedFatG: — (truth 24.5)",
+      "transFatG: — (truth 0.04)",
+      "sodiumMg: — (truth 97.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7379310344827587,
+     "wer": 1.1454545454545455,
+     "ms": 572
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 438)",
+      "proteinG: — (truth 6.4)",
+      "carbohydratesG: — (truth 47.4)",
+      "sugarsG: — (truth 35.1)",
+      "addedSugarG: — (truth 28.9)",
+      "totalFatG: — (truth 24.8)",
+      "transFatG: — (truth 0.04)",
+      "sodiumMg: — (truth 97.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6344827586206897,
+     "wer": 0.9818181818181818,
+     "ms": 1065
+    },
+    "v2device": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 438)",
+      "proteinG: — (truth 6.4)",
+      "carbohydratesG: — (truth 47.4)",
+      "sugarsG: — (truth 35.1)",
+      "addedSugarG: — (truth 28.9)",
+      "totalFatG: — (truth 24.8)",
+      "transFatG: — (truth 0.04)",
+      "sodiumMg: — (truth 97.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6344827586206897,
+     "wer": 0.9818181818181818,
+     "ms": 6132
+    },
+    "v2server": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 8,
+     "wrong": [
+      "proteinG: 64 (truth 6.4)",
+      "carbohydratesG: 2 (truth 47.4)",
+      "sugarsG: 9 (truth 35.1)",
+      "addedSugarG: — (truth 28.9)",
+      "sodiumMg: 974 (truth 97.4)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.38620689655172413,
+     "wer": 0.8181818181818182,
+     "ms": 2077
+    }
+   },
+   "detail": {
+    "v2device": "chose sharpened; tried base(0f/1e), adaptive(0f/1e), sharpened(1f/0e), rot90(0f/1e), rot270(0f/1e), rot180(0f/1e)",
+    "v2server": "chose color; tried color(8f/1e), base(3f/0e)"
+   }
+  },
+  {
+   "file": "8901058023787_nutrition.jpg",
+   "product": "Maggi 2-Minute Masala",
+   "condition": "phone photo, condensed font, three columns",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "energyKcal: — (truth 384)",
+      "proteinG: — (truth 8.2)",
+      "carbohydratesG: 0 (truth 59.6)",
+      "sugarsG: 9 (truth 1.8)",
+      "addedSugarG: — (truth 1.1)",
+      "totalFatG: 13 (truth 12.5)",
+      "saturatedFatG: — (truth 8.2)",
+      "sodiumMg: 10000 (truth 1000)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.4734042553191489,
+     "wer": 0.8289473684210527,
+     "ms": 1288
+    },
+    "variant:base": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "energyKcal: — (truth 384)",
+      "proteinG: — (truth 8.2)",
+      "carbohydratesG: 0 (truth 59.6)",
+      "sugarsG: 9 (truth 1.8)",
+      "addedSugarG: — (truth 1.1)",
+      "totalFatG: 13 (truth 12.5)",
+      "saturatedFatG: — (truth 8.2)",
+      "sodiumMg: 10000 (truth 1000)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.48404255319148937,
+     "wer": 0.8552631578947368,
+     "ms": 1339
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: — (truth 384)",
+      "proteinG: — (truth 8.2)",
+      "carbohydratesG: 0 (truth 59.6)",
+      "sugarsG: 18 (truth 1.8)",
+      "addedSugarG: 9 (truth 1.1)",
+      "totalFatG: 1250 (truth 12.5)",
+      "saturatedFatG: 3 (truth 8.2)",
+      "transFatG: 0 (truth 0.13)",
+      "sodiumMg: 10000 (truth 1000)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.44148936170212766,
+     "wer": 0.8421052631578947,
+     "ms": 809
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "energyKcal: — (truth 384)",
+      "proteinG: — (truth 8.2)",
+      "carbohydratesG: 4 (truth 59.6)",
+      "sugarsG: 18 (truth 1.8)",
+      "addedSugarG: — (truth 1.1)",
+      "totalFatG: 88 (truth 12.5)",
+      "saturatedFatG: — (truth 8.2)",
+      "transFatG: 5 (truth 0.13)",
+      "sodiumMg: 10000 (truth 1000)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.4973404255319149,
+     "wer": 0.8552631578947368,
+     "ms": 1314
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: — (truth 384)",
+      "proteinG: — (truth 8.2)",
+      "carbohydratesG: 0 (truth 59.6)",
+      "sugarsG: 18 (truth 1.8)",
+      "addedSugarG: 9 (truth 1.1)",
+      "totalFatG: 1250 (truth 12.5)",
+      "saturatedFatG: 3 (truth 8.2)",
+      "transFatG: 0 (truth 0.13)",
+      "sodiumMg: 10000 (truth 1000)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.44148936170212766,
+     "wer": 0.8421052631578947,
+     "ms": 3953
+    },
+    "v2server": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: — (truth 384)",
+      "transFatG: — (truth 0.13)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.22606382978723405,
+     "wer": 0.5263157894736842,
+     "ms": 2070
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(5f/1e), adaptive(7f/3e), sharpened(5f/1e)",
+    "v2server": "chose color; tried color(7f/0e)"
+   }
+  },
+  {
+   "file": "8901063023901_nutrition.jpg",
+   "product": "Britannia Marie Gold",
+   "condition": "dark text on yellow, long table, shadow",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: 5 (truth 445)",
+      "proteinG: 84 (truth 8.4)",
+      "carbohydratesG: 789 (truth 78.9)",
+      "sugarsG: 219 (truth 21.9)",
+      "addedSugarG: 0 (truth 20)",
+      "totalFatG: 107 (truth 10.7)",
+      "saturatedFatG: 5.29 (truth 5.2)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 319)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.298372513562387,
+     "wer": 0.625,
+     "ms": 937
+    },
+    "variant:base": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "proteinG: 84 (truth 8.4)",
+      "carbohydratesG: 18.99 (truth 78.9)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 319)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.27124773960216997,
+     "wer": 0.625,
+     "ms": 1083
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 9,
+     "wrong": [
+      "energyKcal: 45 (truth 445)",
+      "proteinG: 84 (truth 8.4)",
+      "carbohydratesG: 18.9 (truth 78.9)",
+      "sugarsG: 219 (truth 21.9)",
+      "addedSugarG: 6 (truth 20)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.31645569620253167,
+     "wer": 0.6770833333333334,
+     "ms": 882
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "proteinG: 84 (truth 8.4)",
+      "carbohydratesG: 1899 (truth 78.9)",
+      "sugarsG: 219 (truth 21.9)",
+      "addedSugarG: 2 (truth 20)",
+      "saturatedFatG: 5.29 (truth 5.2)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 319)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.31464737793851716,
+     "wer": 0.7083333333333334,
+     "ms": 1139
+    },
+    "v2device": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 9,
+     "wrong": [
+      "energyKcal: 45 (truth 445)",
+      "proteinG: 84 (truth 8.4)",
+      "carbohydratesG: 18.9 (truth 78.9)",
+      "sugarsG: 219 (truth 21.9)",
+      "addedSugarG: 6 (truth 20)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.31645569620253167,
+     "wer": 0.6770833333333334,
+     "ms": 3628
+    },
+    "v2server": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "saturatedFatG: — (truth 5.2)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.13924050632911392,
+     "wer": 0.375,
+     "ms": 1474
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(7f/2e), adaptive(9f/3e), sharpened(7f/3e)",
+    "v2server": "chose color; tried color(7f/0e)"
+   }
+  },
+  {
+   "file": "8901063139374_nutrition.jpg",
+   "product": "Britannia Bourbon",
+   "condition": "purple glossy foil, specular highlights",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: 593 (truth 493.5)",
+      "proteinG: — (truth 5)",
+      "carbohydratesG: — (truth 72.7)",
+      "sugarsG: 31 (truth 37)",
+      "addedSugarG: — (truth 35.1)",
+      "totalFatG: — (truth 20.3)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 119)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.46329113924050636,
+     "wer": 0.7804878048780488,
+     "ms": 1231
+    },
+    "variant:base": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: 593 (truth 493.5)",
+      "proteinG: — (truth 5)",
+      "carbohydratesG: — (truth 72.7)",
+      "sugarsG: 31 (truth 37)",
+      "addedSugarG: — (truth 35.1)",
+      "totalFatG: — (truth 20.3)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 119)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.4607594936708861,
+     "wer": 0.7804878048780488,
+     "ms": 1263
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "energyKcal: — (truth 493.5)",
+      "proteinG: 59 (truth 5)",
+      "carbohydratesG: 12.14 (truth 72.7)",
+      "sugarsG: 379 (truth 37)",
+      "addedSugarG: 351 (truth 35.1)",
+      "totalFatG: 203 (truth 20.3)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 119)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.5113924050632911,
+     "wer": 0.9390243902439024,
+     "ms": 980
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 493.5)",
+      "proteinG: — (truth 5)",
+      "sugarsG: 379 (truth 37)",
+      "addedSugarG: — (truth 35.1)",
+      "totalFatG: 3 (truth 20.3)",
+      "saturatedFatG: 78 (truth 10.1)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 119)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.4936708860759494,
+     "wer": 0.8902439024390244,
+     "ms": 1499
+    },
+    "v2device": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: 593 (truth 493.5)",
+      "proteinG: — (truth 5)",
+      "carbohydratesG: — (truth 72.7)",
+      "sugarsG: 31 (truth 37)",
+      "addedSugarG: — (truth 35.1)",
+      "totalFatG: — (truth 20.3)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 119)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.4607594936708861,
+     "wer": 0.7804878048780488,
+     "ms": 4214
+    },
+    "v2server": {
+     "fieldsCorrect": 9,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 9,
+     "wrong": [],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.3240506329113924,
+     "wer": 0.5975609756097561,
+     "ms": 1752
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(3f/0e), adaptive(6f/5e), sharpened(4f/3e)",
+    "v2server": "chose color; tried color(9f/0e)"
+   }
+  },
+  {
+   "file": "8901207004391_nutrition.jpg",
+   "product": "Real Fruit Power Mango",
+   "condition": "clean print, yellow banded rows",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "carbohydratesG: — (truth 14.3)",
+      "sugarsG: 143 (truth 14.3)",
+      "addedSugarG: 108 (truth 10.8)",
+      "sodiumMg: 15 (truth 1.5)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.26112759643916916,
+     "wer": 0.6268656716417911,
+     "ms": 992
+    },
+    "variant:base": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "carbohydratesG: 143 (truth 14.3)",
+      "sugarsG: 143 (truth 14.3)",
+      "addedSugarG: 108 (truth 10.8)",
+      "sodiumMg: 15 (truth 1.5)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.26112759643916916,
+     "wer": 0.6119402985074627,
+     "ms": 1389
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: 7 (truth 57)",
+      "carbohydratesG: 143 (truth 14.3)",
+      "sugarsG: 1434 (truth 14.3)",
+      "sodiumMg: 15 (truth 1.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.3560830860534125,
+     "wer": 0.7611940298507462,
+     "ms": 1124
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "carbohydratesG: 143 (truth 14.3)",
+      "sugarsG: 143 (truth 14.3)",
+      "addedSugarG: 108 (truth 10.8)",
+      "sodiumMg: 15 (truth 1.5)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.2403560830860534,
+     "wer": 0.5223880597014925,
+     "ms": 1427
+    },
+    "v2device": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: 7 (truth 57)",
+      "carbohydratesG: 143 (truth 14.3)",
+      "sugarsG: 1434 (truth 14.3)",
+      "sodiumMg: 15 (truth 1.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.3560830860534125,
+     "wer": 0.7611940298507462,
+     "ms": 4524
+    },
+    "v2server": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "proteinG: 60 (truth 0)",
+      "totalFatG: 60 (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.17210682492581603,
+     "wer": 0.6417910447761194,
+     "ms": 1880
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(7f/3e), adaptive(7f/3e), sharpened(7f/3e)",
+    "v2server": "chose color; tried color(7f/0e)"
+   }
+  },
+  {
+   "file": "8901262200189_nutrition.jpg",
+   "product": "Amul Lassi (pack shown)",
+   "condition": "small low-resolution photo, values per pack",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: 17 (truth 177)",
+      "totalFatG: — (truth 4.2)",
+      "saturatedFatG: — (truth 2.5)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 29)",
+      "sugarsG: — (truth 29)",
+      "addedSugarG: — (truth 24)",
+      "proteinG: — (truth 4.2)",
+      "sodiumMg: — (truth 60)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.6337209302325582,
+     "wer": 1.253968253968254,
+     "ms": 796
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 177)",
+      "totalFatG: — (truth 4.2)",
+      "saturatedFatG: — (truth 2.5)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 29)",
+      "sugarsG: — (truth 29)",
+      "addedSugarG: — (truth 24)",
+      "proteinG: — (truth 4.2)",
+      "sodiumMg: — (truth 60)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6540697674418605,
+     "wer": 1.2380952380952381,
+     "ms": 854
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 177)",
+      "totalFatG: — (truth 4.2)",
+      "saturatedFatG: — (truth 2.5)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 29)",
+      "sugarsG: — (truth 29)",
+      "addedSugarG: — (truth 24)",
+      "proteinG: — (truth 4.2)",
+      "sodiumMg: — (truth 60)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6395348837209303,
+     "wer": 1.1428571428571428,
+     "ms": 966
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 177)",
+      "totalFatG: — (truth 4.2)",
+      "saturatedFatG: — (truth 2.5)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 29)",
+      "sugarsG: — (truth 29)",
+      "addedSugarG: — (truth 24)",
+      "proteinG: — (truth 4.2)",
+      "sodiumMg: — (truth 60)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7383720930232558,
+     "wer": 1.1746031746031746,
+     "ms": 776
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 177)",
+      "totalFatG: — (truth 4.2)",
+      "saturatedFatG: — (truth 2.5)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 29)",
+      "sugarsG: — (truth 29)",
+      "addedSugarG: — (truth 24)",
+      "proteinG: — (truth 4.2)",
+      "sodiumMg: — (truth 60)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6540697674418605,
+     "wer": 1.2380952380952381,
+     "ms": 4781
+    },
+    "v2server": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 8,
+     "wrong": [
+      "energyKcal: 996 (truth 177)",
+      "totalFatG: 42 (truth 4.2)",
+      "saturatedFatG: 25 (truth 2.5)",
+      "proteinG: — (truth 4.2)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.13953488372093023,
+     "wer": 0.6507936507936508,
+     "ms": 1032
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(0f/1e), adaptive(0f/1e), sharpened(0f/1e), rot90(0f/1e), rot270(0f/1e), rot180(0f/1e)",
+    "v2server": "chose color; tried color(8f/0e)"
+   }
+  },
+  {
+   "file": "8901491435000_nutrition.jpg",
+   "product": "Uncle Chipps Plain Salted",
+   "condition": "crinkled foil, glare streaks",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 548)",
+      "proteinG: — (truth 6.7)",
+      "sugarsG: 69 (truth 0.6)",
+      "totalFatG: 15.5 (truth 35)",
+      "saturatedFatG: — (truth 15.5)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 591)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.49236641221374045,
+     "wer": 1,
+     "ms": 2180
+    },
+    "variant:base": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 548)",
+      "proteinG: 5200 (truth 6.7)",
+      "carbohydratesG: — (truth 52)",
+      "sugarsG: 69 (truth 0.6)",
+      "totalFatG: 1 (truth 35)",
+      "saturatedFatG: — (truth 15.5)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 591)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6068702290076335,
+     "wer": 0.9056603773584906,
+     "ms": 2141
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 548)",
+      "proteinG: — (truth 6.7)",
+      "carbohydratesG: — (truth 52)",
+      "sugarsG: 69 (truth 0.6)",
+      "addedSugarG: — (truth 0)",
+      "totalFatG: — (truth 35)",
+      "saturatedFatG: — (truth 15.5)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 591)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7022900763358778,
+     "wer": 1.0188679245283019,
+     "ms": 836
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 548)",
+      "proteinG: — (truth 6.7)",
+      "carbohydratesG: — (truth 52)",
+      "sugarsG: — (truth 0.6)",
+      "addedSugarG: — (truth 0)",
+      "totalFatG: 20 (truth 35)",
+      "saturatedFatG: — (truth 15.5)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 591)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.7404580152671756,
+     "wer": 1.0754716981132075,
+     "ms": 1782
+    },
+    "v2device": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 548)",
+      "proteinG: 5200 (truth 6.7)",
+      "carbohydratesG: — (truth 52)",
+      "sugarsG: 69 (truth 0.6)",
+      "totalFatG: 1 (truth 35)",
+      "saturatedFatG: — (truth 15.5)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 591)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6068702290076335,
+     "wer": 0.9056603773584906,
+     "ms": 5607
+    },
+    "v2server": {
+     "fieldsCorrect": 8,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 9,
+     "wrong": [
+      "proteinG: 6.79 (truth 6.7)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.17938931297709923,
+     "wer": 0.5283018867924528,
+     "ms": 3399
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(4f/2e), adaptive(1f/0e), sharpened(1f/0e)",
+    "v2server": "chose color; tried color(9f/0e)"
+   }
+  },
+  {
+   "file": "8901491503020_nutrition.jpg",
+   "product": "Lay's India's Magic Masala",
+   "condition": "crinkled foil, 'OR' alternative values",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 531)",
+      "proteinG: — (truth 6.6)",
+      "carbohydratesG: — (truth 51.9)",
+      "sugarsG: — (truth 1.6)",
+      "addedSugarG: — (truth 0.9)",
+      "totalFatG: — (truth 33)",
+      "saturatedFatG: — (truth 14.9)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 677)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.701067615658363,
+     "wer": 1.0517241379310345,
+     "ms": 569
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 531)",
+      "proteinG: — (truth 6.6)",
+      "carbohydratesG: — (truth 51.9)",
+      "sugarsG: — (truth 1.6)",
+      "addedSugarG: 99 (truth 0.9)",
+      "totalFatG: — (truth 33)",
+      "saturatedFatG: — (truth 14.9)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 677)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6156583629893239,
+     "wer": 0.9827586206896551,
+     "ms": 1053
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "energyKcal: — (truth 531)",
+      "proteinG: — (truth 6.6)",
+      "carbohydratesG: — (truth 51.9)",
+      "sugarsG: 169 (truth 1.6)",
+      "addedSugarG: 99 (truth 0.9)",
+      "totalFatG: — (truth 33)",
+      "saturatedFatG: — (truth 14.9)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 677)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.5516014234875445,
+     "wer": 0.9482758620689655,
+     "ms": 729
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 531)",
+      "proteinG: — (truth 6.6)",
+      "carbohydratesG: — (truth 51.9)",
+      "sugarsG: — (truth 1.6)",
+      "addedSugarG: — (truth 0.9)",
+      "totalFatG: — (truth 33)",
+      "saturatedFatG: — (truth 14.9)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 677)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": true,
+     "cer": 0.608540925266904,
+     "wer": 1.0689655172413792,
+     "ms": 1265
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "energyKcal: — (truth 531)",
+      "proteinG: — (truth 6.6)",
+      "carbohydratesG: — (truth 51.9)",
+      "sugarsG: 169 (truth 1.6)",
+      "addedSugarG: 99 (truth 0.9)",
+      "totalFatG: — (truth 33)",
+      "saturatedFatG: — (truth 14.9)",
+      "transFatG: — (truth 0.1)",
+      "sodiumMg: — (truth 677)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.5516014234875445,
+     "wer": 0.9482758620689655,
+     "ms": 7298
+    },
+    "v2server": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 9,
+     "wrong": [
+      "carbohydratesG: 5 (truth 51.9)",
+      "sugarsG: 1.69 (truth 1.6)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.24555160142348753,
+     "wer": 0.6379310344827587,
+     "ms": 1349
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(1f/0e), adaptive(2f/1e), sharpened(0f/1e), rot90(0f/1e), rot270(0f/1e), rot180(0f/1e)",
+    "v2server": "chose color; tried color(9f/0e)"
+   }
+  },
+  {
+   "file": "8901499008190_nutrition.jpg",
+   "product": "Kellogg's Corn Flakes",
+   "condition": "angled photo, perspective, pink column, extra milk column",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "energyKcal: 760 (truth 378)",
+      "totalFatG: 0 (truth 1)",
+      "saturatedFatG: 60 (truth 0.6)",
+      "sugarsG: 92 (truth 9.2)",
+      "addedSugarG: 800 (truth 8)",
+      "fibreG: 250 (truth 2.5)",
+      "sodiumMg: 207 (truth 490)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.2206148282097649,
+     "wer": 0.5299145299145299,
+     "ms": 1002
+    },
+    "variant:base": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "energyKcal: 0 (truth 378)",
+      "totalFatG: 100 (truth 1)",
+      "saturatedFatG: 6 (truth 0.6)",
+      "sugarsG: 92 (truth 9.2)",
+      "addedSugarG: 800 (truth 8)",
+      "fibreG: 25 (truth 2.5)",
+      "sodiumMg: 80 (truth 490)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.21338155515370705,
+     "wer": 0.5897435897435898,
+     "ms": 1511
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "energyKcal: 9 (truth 378)",
+      "totalFatG: 109 (truth 1)",
+      "saturatedFatG: 69 (truth 0.6)",
+      "carbohydratesG: 85.9 (truth 86.9)",
+      "addedSugarG: 800 (truth 8)",
+      "fibreG: 25 (truth 2.5)",
+      "proteinG: 67 (truth 6.7)",
+      "sodiumMg: 207 (truth 490)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.2640144665461121,
+     "wer": 0.6581196581196581,
+     "ms": 1289
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "energyKcal: 760 (truth 378)",
+      "totalFatG: 100 (truth 1)",
+      "saturatedFatG: 60 (truth 0.6)",
+      "sugarsG: 920 (truth 9.2)",
+      "fibreG: 25 (truth 2.5)",
+      "sodiumMg: 430 (truth 490)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.20433996383363473,
+     "wer": 0.5470085470085471,
+     "ms": 1426
+    },
+    "v2device": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "energyKcal: 9 (truth 378)",
+      "totalFatG: 109 (truth 1)",
+      "saturatedFatG: 69 (truth 0.6)",
+      "carbohydratesG: 85.9 (truth 86.9)",
+      "addedSugarG: 800 (truth 8)",
+      "fibreG: 25 (truth 2.5)",
+      "proteinG: 67 (truth 6.7)",
+      "sodiumMg: 207 (truth 490)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.2640144665461121,
+     "wer": 0.6581196581196581,
+     "ms": 4725
+    },
+    "v2server": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 9,
+     "wrong": [
+      "saturatedFatG: 6 (truth 0.6)",
+      "carbohydratesG: 6698 (truth 86.9)",
+      "sugarsG: 92 (truth 9.2)",
+      "fibreG: — (truth 2.5)",
+      "proteinG: 259 (truth 6.7)",
+      "sodiumMg: 6.79 (truth 490)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.30198915009041594,
+     "wer": 0.9145299145299145,
+     "ms": 3941
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(10f/5e), adaptive(10f/4e), sharpened(10f/5e)",
+    "v2server": "chose color; tried color(9f/6e), base(8f/3e)"
+   }
+  },
+  {
+   "file": "8901719117183_nutrition.jpg",
+   "product": "Parle Hide & Seek",
+   "condition": "silver print on dark purple (inverted contrast)",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "proteinG: 0 (truth 6)",
+      "carbohydratesG: — (truth 74.2)",
+      "sugarsG: — (truth 32.6)",
+      "addedSugarG: 107 (truth 32.3)",
+      "totalFatG: 0 (truth 17)",
+      "sodiumMg: 1 (truth 120)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.40404040404040403,
+     "wer": 0.7972972972972973,
+     "ms": 1391
+    },
+    "variant:base": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "proteinG: 3 (truth 6)",
+      "carbohydratesG: — (truth 74.2)",
+      "sugarsG: — (truth 32.6)",
+      "addedSugarG: 0 (truth 32.3)",
+      "totalFatG: 0 (truth 17)",
+      "saturatedFatG: 112 (truth 11.2)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.43434343434343436,
+     "wer": 0.8513513513513513,
+     "ms": 1807
+    },
+    "variant:inverted": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "proteinG: 3 (truth 6)",
+      "carbohydratesG: — (truth 74.2)",
+      "sugarsG: — (truth 32.6)",
+      "addedSugarG: 0 (truth 32.3)",
+      "totalFatG: — (truth 17)",
+      "saturatedFatG: 112 (truth 11.2)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.4393939393939394,
+     "wer": 0.8513513513513513,
+     "ms": 1592
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: — (truth 474)",
+      "proteinG: 0 (truth 6)",
+      "carbohydratesG: — (truth 74.2)",
+      "sugarsG: 328 (truth 32.6)",
+      "addedSugarG: 323 (truth 32.3)",
+      "saturatedFatG: 0 (truth 11.2)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.37626262626262624,
+     "wer": 0.7297297297297297,
+     "ms": 879
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 8,
+     "wrong": [
+      "proteinG: — (truth 6)",
+      "carbohydratesG: 0 (truth 74.2)",
+      "sugarsG: 328 (truth 32.6)",
+      "addedSugarG: 323 (truth 32.3)",
+      "totalFatG: 0 (truth 17)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.39141414141414144,
+     "wer": 0.7972972972972973,
+     "ms": 1725
+    },
+    "v2device": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: — (truth 474)",
+      "proteinG: 0 (truth 6)",
+      "carbohydratesG: — (truth 74.2)",
+      "sugarsG: 328 (truth 32.6)",
+      "addedSugarG: 323 (truth 32.3)",
+      "saturatedFatG: 0 (truth 11.2)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.37626262626262624,
+     "wer": 0.7297297297297297,
+     "ms": 6463
+    },
+    "v2server": {
+     "fieldsCorrect": 6,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "proteinG: — (truth 6)",
+      "totalFatG: — (truth 17)",
+      "sodiumMg: — (truth 120)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.3181818181818182,
+     "wer": 0.7702702702702703,
+     "ms": 5886
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(6f/2e), inverted(5f/1e), adaptive(7f/2e), sharpened(8f/4e)",
+    "v2server": "chose color; tried color(6f/0e), base(7f/2e), inverted(7f/2e)"
+   }
+  },
+  {
+   "file": "8901725005887_nutrition.jpg",
+   "product": "Sunfeast YiPPee! Noodles",
+   "condition": "yellow banded rows, brown header, glare",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 459)",
+      "proteinG: — (truth 9)",
+      "carbohydratesG: — (truth 62.6)",
+      "sugarsG: — (truth 3)",
+      "addedSugarG: 15 (truth 1.6)",
+      "totalFatG: — (truth 20.1)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 10.7)",
+      "sodiumMg: — (truth 1247.1)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.5544554455445545,
+     "wer": 0.9125,
+     "ms": 2658
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 459)",
+      "proteinG: — (truth 9)",
+      "carbohydratesG: 30 (truth 62.6)",
+      "sugarsG: — (truth 3)",
+      "addedSugarG: 15 (truth 1.6)",
+      "totalFatG: — (truth 20.1)",
+      "transFatG: 107 (truth 0.1)",
+      "saturatedFatG: — (truth 10.7)",
+      "sodiumMg: 2.3 (truth 1247.1)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.5544554455445545,
+     "wer": 0.9125,
+     "ms": 2636
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: 1 (truth 459)",
+      "proteinG: — (truth 9)",
+      "carbohydratesG: 626 (truth 62.6)",
+      "sugarsG: — (truth 3)",
+      "addedSugarG: 16 (truth 1.6)",
+      "totalFatG: — (truth 20.1)",
+      "transFatG: 107 (truth 0.1)",
+      "saturatedFatG: — (truth 10.7)",
+      "sodiumMg: — (truth 1247.1)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.6039603960396039,
+     "wer": 1.0625,
+     "ms": 1129
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 459)",
+      "proteinG: — (truth 9)",
+      "carbohydratesG: — (truth 62.6)",
+      "sugarsG: 30 (truth 3)",
+      "addedSugarG: — (truth 1.6)",
+      "totalFatG: 2010 (truth 20.1)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 10.7)",
+      "sodiumMg: 12411 (truth 1247.1)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.5717821782178217,
+     "wer": 0.8375,
+     "ms": 2573
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 459)",
+      "proteinG: — (truth 9)",
+      "carbohydratesG: 30 (truth 62.6)",
+      "sugarsG: — (truth 3)",
+      "addedSugarG: 15 (truth 1.6)",
+      "totalFatG: — (truth 20.1)",
+      "transFatG: 107 (truth 0.1)",
+      "saturatedFatG: — (truth 10.7)",
+      "sodiumMg: 2.3 (truth 1247.1)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.5544554455445545,
+     "wer": 0.9125,
+     "ms": 7335
+    },
+    "v2server": {
+     "fieldsCorrect": 8,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 8,
+     "wrong": [
+      "energyKcal: — (truth 459)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.2747524752475248,
+     "wer": 0.4625,
+     "ms": 6957
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(4f/1e), adaptive(4f/4e), sharpened(3f/3e)",
+    "v2server": "chose color; tried color(8f/1e), base(8f/1e)"
+   }
+  },
+  {
+   "file": "8901725132873_nutrition.jpg",
+   "product": "Sunfeast Dark Fantasy Choco Fills",
+   "condition": "light text on dark brown",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "energyKcal: — (truth 504)",
+      "proteinG: — (truth 5.7)",
+      "carbohydratesG: 639 (truth 63.9)",
+      "sugarsG: — (truth 37.6)",
+      "totalFatG: — (truth 25)",
+      "transFatG: 1 (truth 0.1)",
+      "saturatedFatG: — (truth 11.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.4,
+     "wer": 0.8235294117647058,
+     "ms": 1080
+    },
+    "variant:base": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "energyKcal: — (truth 504)",
+      "proteinG: 7 (truth 5.7)",
+      "sugarsG: — (truth 37.6)",
+      "totalFatG: — (truth 25)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 11.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.5473684210526316,
+     "wer": 1.1764705882352942,
+     "ms": 6986
+    },
+    "variant:inverted": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "energyKcal: — (truth 504)",
+      "proteinG: 7 (truth 5.7)",
+      "carbohydratesG: 2 (truth 63.9)",
+      "sugarsG: — (truth 37.6)",
+      "totalFatG: — (truth 25)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 11.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.5578947368421052,
+     "wer": 1.1764705882352942,
+     "ms": 7055
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 504)",
+      "proteinG: — (truth 5.7)",
+      "carbohydratesG: — (truth 63.9)",
+      "sugarsG: — (truth 37.6)",
+      "totalFatG: — (truth 25)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 11.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.7105263157894737,
+     "wer": 1.3235294117647058,
+     "ms": 10443
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 504)",
+      "proteinG: 9 (truth 5.7)",
+      "carbohydratesG: — (truth 63.9)",
+      "sugarsG: — (truth 37.6)",
+      "totalFatG: — (truth 25)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 11.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.6947368421052632,
+     "wer": 1.2941176470588236,
+     "ms": 9342
+    },
+    "v2device": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "energyKcal: — (truth 504)",
+      "proteinG: 7 (truth 5.7)",
+      "sugarsG: — (truth 37.6)",
+      "totalFatG: — (truth 25)",
+      "transFatG: — (truth 0.1)",
+      "saturatedFatG: — (truth 11.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.5473684210526316,
+     "wer": 1.1764705882352942,
+     "ms": 56183
+    },
+    "v2server": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.031578947368421054,
+     "wer": 0.29411764705882354,
+     "ms": 1533
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(2f/0e), inverted(2f/0e), adaptive(0f/1e), sharpened(1f/0e), rot90(0f/1e), rot270(0f/1e), rot180(0f/1e)",
+    "v2server": "chose color; tried color(7f/0e)"
+   }
+  },
+  {
+   "file": "8901764012914_nutrition.jpg",
+   "product": "Coca-Cola",
+   "condition": "small photo, white on red, condensed caps",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "energyKcal: 4 (truth 44)",
+      "sugarsG: 10.69 (truth 10.6)",
+      "addedSugarG: 10.69 (truth 10.6)",
+      "sodiumMg: 85 (truth 8.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.39166666666666666,
+     "wer": 0.8297872340425532,
+     "ms": 630
+    },
+    "variant:base": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: 4 (truth 44)",
+      "carbohydratesG: — (truth 10.9)",
+      "addedSugarG: 10.69 (truth 10.6)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.3875,
+     "wer": 0.7446808510638298,
+     "ms": 577
+    },
+    "variant:inverted": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: 4 (truth 44)",
+      "carbohydratesG: — (truth 10.9)",
+      "sugarsG: 10.69 (truth 10.6)",
+      "addedSugarG: 10.69 (truth 10.6)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.38333333333333336,
+     "wer": 0.7872340425531915,
+     "ms": 540
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 44)",
+      "sugarsG: — (truth 10.6)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: 85 (truth 8.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.475,
+     "wer": 0.9148936170212766,
+     "ms": 375
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: 10.99 (truth 44)",
+      "carbohydratesG: — (truth 10.9)",
+      "addedSugarG: 10.69 (truth 10.6)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: 85 (truth 8.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.39166666666666666,
+     "wer": 0.7659574468085106,
+     "ms": 516
+    },
+    "v2device": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: 4 (truth 44)",
+      "carbohydratesG: — (truth 10.9)",
+      "addedSugarG: 10.69 (truth 10.6)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.3875,
+     "wer": 0.7446808510638298,
+     "ms": 2189
+    },
+    "v2server": {
+     "fieldsCorrect": 6,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "proteinG: — (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.2125,
+     "wer": 0.8723404255319149,
+     "ms": 2571
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(4f/0e), inverted(4f/0e), adaptive(3f/1e), sharpened(4f/0e)",
+    "v2server": "chose base; tried color(6f/1e), base(6f/0e), inverted(6f/0e)"
+   }
+  },
+  {
+   "file": "8901764032912_nutrition.jpg",
+   "product": "Sprite",
+   "condition": "white on green, condensed caps",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "sugarsG: 9.89 (truth 9.8)",
+      "addedSugarG: 9.89 (truth 9.8)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.17120622568093385,
+     "wer": 0.5192307692307693,
+     "ms": 1125
+    },
+    "variant:base": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.19066147859922178,
+     "wer": 0.5384615384615384,
+     "ms": 1462
+    },
+    "variant:inverted": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.19066147859922178,
+     "wer": 0.5384615384615384,
+     "ms": 1268
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "energyKcal: — (truth 40)",
+      "carbohydratesG: 104 (truth 10)",
+      "addedSugarG: 9.89 (truth 9.8)",
+      "proteinG: 9 (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.3424124513618677,
+     "wer": 0.7692307692307693,
+     "ms": 735
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "carbohydratesG: — (truth 10)",
+      "sugarsG: 9.89 (truth 9.8)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.2529182879377432,
+     "wer": 0.6538461538461539,
+     "ms": 1236
+    },
+    "v2device": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.19066147859922178,
+     "wer": 0.5384615384615384,
+     "ms": 2020
+    },
+    "v2server": {
+     "fieldsCorrect": 6,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "totalFatG: 60 (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.14396887159533073,
+     "wer": 0.7115384615384616,
+     "ms": 3215
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(7f/0e)",
+    "v2server": "chose base; tried color(6f/1e), base(7f/0e)"
+   }
+  },
+  {
+   "file": "8901764042911_nutrition.jpg",
+   "product": "Thums Up",
+   "condition": "white on blue bottle, curved, extra text below",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "carbohydratesG: — (truth 9.7)",
+      "sugarsG: — (truth 9.5)",
+      "addedSugarG: — (truth 9.5)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 22)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.6550387596899225,
+     "wer": 0.9807692307692307,
+     "ms": 3276
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 39)",
+      "carbohydratesG: — (truth 9.7)",
+      "sugarsG: — (truth 9.5)",
+      "addedSugarG: — (truth 9.5)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 22)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6666666666666666,
+     "wer": 1.2115384615384615,
+     "ms": 3739
+    },
+    "variant:inverted": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 39)",
+      "carbohydratesG: — (truth 9.7)",
+      "sugarsG: — (truth 9.5)",
+      "addedSugarG: — (truth 9.5)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 22)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6937984496124031,
+     "wer": 1.1538461538461537,
+     "ms": 3402
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 39)",
+      "carbohydratesG: — (truth 9.7)",
+      "sugarsG: 95 (truth 9.5)",
+      "addedSugarG: — (truth 9.5)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 22)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": true,
+     "cer": 0.47674418604651164,
+     "wer": 0.9423076923076923,
+     "ms": 1250
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 39)",
+      "carbohydratesG: — (truth 9.7)",
+      "sugarsG: — (truth 9.5)",
+      "addedSugarG: — (truth 9.5)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 22)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.6744186046511628,
+     "wer": 1.1153846153846154,
+     "ms": 4252
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 39)",
+      "carbohydratesG: — (truth 9.7)",
+      "sugarsG: 95 (truth 9.5)",
+      "addedSugarG: — (truth 9.5)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 22)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": true,
+     "cer": 0.47674418604651164,
+     "wer": 0.9423076923076923,
+     "ms": 27208
+    },
+    "v2server": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "carbohydratesG: 676 (truth 9.7)",
+      "addedSugarG: — (truth 9.5)",
+      "totalFatG: 60 (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.15891472868217055,
+     "wer": 0.6923076923076923,
+     "ms": 8817
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(0f/1e), inverted(0f/1e), adaptive(1f/0e), sharpened(1f/0e), rot90(0f/1e), rot270(0f/1e), rot180(0f/1e)",
+    "v2server": "chose base; tried color(4f/0e), base(6f/1e), inverted(4f/1e)"
+   }
+  },
+  {
+   "file": "8901764111259_nutrition.jpg",
+   "product": "Coca-Cola Zero Sugar",
+   "condition": "dark red on red, very low contrast, no header in crop",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 0)",
+      "carbohydratesG: — (truth 0)",
+      "sugarsG: — (truth 0)",
+      "addedSugarG: — (truth 0)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 7.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.6666666666666666,
+     "wer": 1,
+     "ms": 437
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 0)",
+      "carbohydratesG: — (truth 0)",
+      "sugarsG: — (truth 0)",
+      "addedSugarG: — (truth 0)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 7.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.7105263157894737,
+     "wer": 1,
+     "ms": 599
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 0)",
+      "carbohydratesG: — (truth 0)",
+      "sugarsG: — (truth 0)",
+      "addedSugarG: 10 (truth 0)",
+      "sodiumMg: — (truth 7.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.32456140350877194,
+     "wer": 0.8214285714285714,
+     "ms": 518
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 0)",
+      "carbohydratesG: — (truth 0)",
+      "sugarsG: — (truth 0)",
+      "addedSugarG: — (truth 0)",
+      "totalFatG: — (truth 0)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: — (truth 7.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.6754385964912281,
+     "wer": 1.1785714285714286,
+     "ms": 1139
+    },
+    "v2device": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 0)",
+      "carbohydratesG: — (truth 0)",
+      "sugarsG: — (truth 0)",
+      "addedSugarG: 10 (truth 0)",
+      "sodiumMg: — (truth 7.5)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.32456140350877194,
+     "wer": 0.8214285714285714,
+     "ms": 2611
+    },
+    "v2server": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "sugarsG: — (truth 0)",
+      "addedSugarG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.21052631578947367,
+     "wer": 0.7142857142857143,
+     "ms": 2210
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(0f/1e), adaptive(3f/0e), sharpened(0f/1e)",
+    "v2server": "chose base; tried color(4f/1e), base(5f/0e)"
+   }
+  },
+  {
+   "file": "8902579103170_nutrition.jpg",
+   "product": "Frooti",
+   "condition": "clean print, green on yellow, per-serve header",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "energyKcal: — (truth 62.9)",
+      "proteinG: — (truth 0)",
+      "sodiumMg: 254 (truth 25.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 1,
+     "servingOk": false,
+     "cer": 0.1813031161473088,
+     "wer": 0.3770491803278688,
+     "ms": 625
+    },
+    "variant:base": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 62.9)",
+      "proteinG: — (truth 0)",
+      "carbohydratesG: — (truth 15.7)",
+      "sugarsG: — (truth 15.6)",
+      "addedSugarG: — (truth 14.2)",
+      "totalFatG: — (truth 0)",
+      "sodiumMg: — (truth 25.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.17563739376770537,
+     "wer": 0.4098360655737705,
+     "ms": 748
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 62.9)",
+      "proteinG: — (truth 0)",
+      "carbohydratesG: — (truth 15.7)",
+      "sugarsG: — (truth 15.6)",
+      "addedSugarG: — (truth 14.2)",
+      "totalFatG: — (truth 0)",
+      "sodiumMg: — (truth 25.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.06232294617563739,
+     "wer": 0.29508196721311475,
+     "ms": 558
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 62.9)",
+      "proteinG: — (truth 0)",
+      "carbohydratesG: — (truth 15.7)",
+      "sugarsG: — (truth 15.6)",
+      "addedSugarG: — (truth 14.2)",
+      "totalFatG: — (truth 0)",
+      "sodiumMg: — (truth 25.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.17847025495750707,
+     "wer": 0.39344262295081966,
+     "ms": 718
+    },
+    "v2device": {
+     "fieldsCorrect": 0,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 0,
+     "wrong": [
+      "energyKcal: — (truth 62.9)",
+      "proteinG: — (truth 0)",
+      "carbohydratesG: — (truth 15.7)",
+      "sugarsG: — (truth 15.6)",
+      "addedSugarG: — (truth 14.2)",
+      "totalFatG: — (truth 0)",
+      "sodiumMg: — (truth 25.4)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.06232294617563739,
+     "wer": 0.29508196721311475,
+     "ms": 2274
+    },
+    "v2server": {
+     "fieldsCorrect": 7,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.10764872521246459,
+     "wer": 0.7540983606557377,
+     "ms": 1481
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(5f/0e), adaptive(7f/2e), sharpened(5f/0e)",
+    "v2server": "chose color; tried color(7f/0e)"
+   }
+  },
+  {
+   "file": "8904004400762_nutrition.jpg",
+   "product": "Haldiram's Aloo Bhujia",
+   "condition": "values printed one row out of alignment with their labels",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 562)",
+      "carbohydratesG: — (truth 46.1)",
+      "sugarsG: — (truth 0.25)",
+      "totalFatG: — (truth 38.12)",
+      "fibreG: — (truth 0.83)",
+      "sodiumMg: — (truth 615)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.24458204334365324,
+     "wer": 0.532258064516129,
+     "ms": 1063
+    },
+    "variant:base": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 562)",
+      "carbohydratesG: — (truth 46.1)",
+      "sugarsG: — (truth 0.25)",
+      "totalFatG: — (truth 38.12)",
+      "fibreG: — (truth 0.83)",
+      "sodiumMg: — (truth 615)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.24148606811145512,
+     "wer": 0.532258064516129,
+     "ms": 1072
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "energyKcal: — (truth 562)",
+      "carbohydratesG: — (truth 46.1)",
+      "sugarsG: — (truth 0.25)",
+      "proteinG: 8689 (truth 8.68)",
+      "fibreG: — (truth 0.83)",
+      "sodiumMg: — (truth 615)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.23529411764705882,
+     "wer": 0.5161290322580645,
+     "ms": 617
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 562)",
+      "carbohydratesG: — (truth 46.1)",
+      "sugarsG: — (truth 0.25)",
+      "totalFatG: — (truth 38.12)",
+      "transFatG: — (truth 0)",
+      "proteinG: — (truth 8.68)",
+      "fibreG: — (truth 0.83)",
+      "sodiumMg: — (truth 615)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.3684210526315789,
+     "wer": 0.5967741935483871,
+     "ms": 1082
+    },
+    "v2device": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "energyKcal: — (truth 562)",
+      "carbohydratesG: — (truth 46.1)",
+      "sugarsG: — (truth 0.25)",
+      "totalFatG: — (truth 38.12)",
+      "fibreG: — (truth 0.83)",
+      "sodiumMg: — (truth 615)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": null,
+     "cer": 0.24148606811145512,
+     "wer": 0.532258064516129,
+     "ms": 3021
+    },
+    "v2server": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 9,
+     "fieldsPredicted": 9,
+     "wrong": [
+      "transFatG: 8.68 (truth 0)",
+      "proteinG: 0.83 (truth 8.68)",
+      "fibreG: 615 (truth 0.83)",
+      "sodiumMg: 0 (truth 615)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 2,
+     "servingOk": null,
+     "cer": 0.17956656346749225,
+     "wer": 0.6774193548387096,
+     "ms": 1705
+    }
+   },
+   "detail": {
+    "v2device": "chose base; tried base(3f/0e), adaptive(4f/2e), sharpened(1f/0e)",
+    "v2server": "chose color; tried color(9f/1e), base(9f/1e)"
+   }
+  },
+  {
+   "file": "8901063093522_nutrition.jpg",
+   "product": "Britannia (Good Day record photo)",
+   "condition": "clean digital artwork, reversed white text on orange",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "sugarsG: 229 (truth 22)",
+      "proteinG: 19 (truth 7)",
+      "totalFatG: — (truth 24)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.05439330543933055,
+     "wer": 0.18421052631578946,
+     "ms": 711
+    },
+    "variant:base": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "proteinG: 19 (truth 7)",
+      "totalFatG: — (truth 24)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.0502092050209205,
+     "wer": 0.15789473684210525,
+     "ms": 751
+    },
+    "variant:inverted": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "sugarsG: 229 (truth 22)",
+      "proteinG: 19 (truth 7)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.04602510460251046,
+     "wer": 0.18421052631578946,
+     "ms": 453
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "sugarsG: 229 (truth 22)",
+      "proteinG: 1 (truth 7)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.02092050209205021,
+     "wer": 0.13157894736842105,
+     "ms": 376
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 6,
+     "wrong": [
+      "sugarsG: 229 (truth 22)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.03347280334728033,
+     "wer": 0.13157894736842105,
+     "ms": 462
+    },
+    "v2device": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 7,
+     "wrong": [
+      "sugarsG: 229 (truth 22)",
+      "proteinG: 1 (truth 7)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.02092050209205021,
+     "wer": 0.13157894736842105,
+     "ms": 2220
+    },
+    "v2server": {
+     "fieldsCorrect": 3,
+     "fieldsTotal": 7,
+     "fieldsPredicted": 3,
+     "wrong": [
+      "proteinG: — (truth 7)",
+      "totalFatG: — (truth 24)",
+      "saturatedFatG: — (truth 11)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 1,
+     "unitTotal": 1,
+     "servingOk": null,
+     "cer": 0.15481171548117154,
+     "wer": 0.7368421052631579,
+     "ms": 2621
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(5f/0e), inverted(6f/3e), adaptive(7f/2e), sharpened(6f/2e)",
+    "v2server": "chose inverted; tried color(1f/0e), base(1f/0e), inverted(3f/0e)"
+   }
+  },
+  {
+   "file": "7622201150419_nutrition.jpg",
+   "product": "Cadbury 5 Star (US-style Nutrition Facts)",
+   "condition": "US 'Nutrition Facts' format, per serving, wrinkled",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 1,
+     "fieldsTotal": 8,
+     "fieldsPredicted": 1,
+     "wrong": [
+      "energyKcal: — (truth 210)",
+      "totalFatG: — (truth 9)",
+      "saturatedFatG: — (truth 5)",
+      "transFatG: — (truth 0)",
+      "sodiumMg: — (truth 30)",
+      "sugarsG: — (truth 28)",
+      "proteinG: — (truth 3)"
+     ],
+     "unitOk": 0,
+     "unitTotal": 0,
+     "servingOk": false,
+     "cer": 0.4215686274509804,
+     "wer": 0.8666666666666667,
+     "ms": 837
+    },
+    "variant:base": {
+     "fieldsCorrect": 2,
+     "fieldsTotal": 8,
+     "fieldsPredicted": 2,
+     "wrong": [
+      "totalFatG: — (truth 9)",
+      "saturatedFatG: — (truth 5)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 30)",
+      "sugarsG: — (truth 28)",
+      "proteinG: — (truth 3)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.369281045751634,
+     "wer": 0.7666666666666667,
+     "ms": 750
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 8,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "totalFatG: — (truth 9)",
+      "saturatedFatG: — (truth 5)",
+      "transFatG: — (truth 0)",
+      "sugarsG: — (truth 28)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.38562091503267976,
+     "wer": 0.75,
+     "ms": 694
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 8,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "totalFatG: — (truth 9)",
+      "transFatG: — (truth 0)",
+      "carbohydratesG: — (truth 30)",
+      "proteinG: — (truth 3)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.4084967320261438,
+     "wer": 0.7666666666666667,
+     "ms": 749
+    },
+    "v2device": {
+     "fieldsCorrect": 4,
+     "fieldsTotal": 8,
+     "fieldsPredicted": 4,
+     "wrong": [
+      "totalFatG: — (truth 9)",
+      "saturatedFatG: — (truth 5)",
+      "transFatG: — (truth 0)",
+      "sugarsG: — (truth 28)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.38562091503267976,
+     "wer": 0.75,
+     "ms": 2542
+    },
+    "v2server": {
+     "fieldsCorrect": 5,
+     "fieldsTotal": 8,
+     "fieldsPredicted": 5,
+     "wrong": [
+      "totalFatG: — (truth 9)",
+      "saturatedFatG: — (truth 5)",
+      "transFatG: — (truth 0)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": false,
+     "cer": 0.27450980392156865,
+     "wer": 0.7,
+     "ms": 2947
+    }
+   },
+   "detail": {
+    "v2device": "chose adaptive; tried base(2f/1e), adaptive(5f/1e), sharpened(4f/1e)",
+    "v2server": "chose color; tried color(5f/1e), base(5f/1e)"
+   }
+  },
+  {
+   "file": "sample-label.png",
+   "product": "Synthetic sample label (fictional)",
+   "condition": "clean synthetic render",
+   "scores": {
+    "v1": {
+     "fieldsCorrect": 9,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "fibreG: 15 (truth 1.5)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.0045662100456621,
+     "wer": 0.024390243902439025,
+     "ms": 1211
+    },
+    "variant:base": {
+     "fieldsCorrect": 9,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "fibreG: 15 (truth 1.5)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.0091324200913242,
+     "wer": 0.06097560975609756,
+     "ms": 1542
+    },
+    "variant:adaptive": {
+     "fieldsCorrect": 8,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "saturatedFatG: 1.7 (truth 11.7)",
+      "fibreG: 15 (truth 1.5)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.01598173515981735,
+     "wer": 0.10975609756097561,
+     "ms": 1403
+    },
+    "variant:sharpened": {
+     "fieldsCorrect": 9,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "fibreG: 15 (truth 1.5)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.00684931506849315,
+     "wer": 0.04878048780487805,
+     "ms": 1522
+    },
+    "v2device": {
+     "fieldsCorrect": 9,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [
+      "fibreG: 15 (truth 1.5)"
+     ],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.00684931506849315,
+     "wer": 0.04878048780487805,
+     "ms": 4552
+    },
+    "v2server": {
+     "fieldsCorrect": 10,
+     "fieldsTotal": 10,
+     "fieldsPredicted": 10,
+     "wrong": [],
+     "unitOk": 2,
+     "unitTotal": 2,
+     "servingOk": true,
+     "cer": 0.0091324200913242,
+     "wer": 0.06097560975609756,
+     "ms": 2127
+    }
+   },
+   "detail": {
+    "v2device": "chose sharpened; tried base(10f/1e), adaptive(10f/1e), sharpened(10f/0e)",
+    "v2server": "chose color; tried color(10f/0e)"
+   }
+  }
+ ]
+}

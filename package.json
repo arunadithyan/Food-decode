@@ -1,0 +1,49 @@
+{
+  "name": "fooddecode",
+  "version": "2.0.0",
+  "private": true,
+  "description": "FoodDecode 2.0 \u2014 India-first personalised food-label intelligence",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "seed": "node scripts/run-ts.mjs scripts/seed.ts",
+    "test": "vitest run tests/unit",
+    "test:unit": "vitest run tests/unit",
+    "test:api": "vitest run tests/api",
+    "test:e2e": "playwright test",
+    "bench:ocr": "node scripts/run-ts.mjs bench/run.ts",
+    "typecheck": "tsc --noEmit",
+    "ocr-server": "python3 services/ocr-server/server.py"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/figtree": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "next": "^15.5.29",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "tesseract.js": "^5.1.1",
+    "tesseract.js-core": "^5.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "sharp": "^0.35.5",
+    "tailwindcss": "3.4",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
