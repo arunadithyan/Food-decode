@@ -7,6 +7,7 @@ import "server-only";
 import { emptyProfile, type HealthProfile, validateProfile } from "../profile";
 import type { Product } from "../types";
 import { decryptJSON, encryptJSON, newId } from "./crypto";
+import type { DiaryEntry, DiaryEntryInput, DiarySettings } from "../diary";
 import { getDb, tx } from "./db";
 
 const AAD = {
@@ -14,13 +15,15 @@ const AAD = {
   history: (u: string) => `profile_history:${u}`,
   scan: (u: string) => `scan:${u}`,
   comparison: (u: string) => `comparison:${u}`,
+  food: (u: string) => `food_log:${u}`,
+  diary: (u: string) => `diary_settings:${u}`,
 };
 
 /* ---------------- consents & settings ---------------- */
-export type ConsentKind = "health_data" | "cloud_ocr" | "scan_history";
+export type ConsentKind = "health_data" | "cloud_ocr" | "scan_history" | "food_log";
 export function getConsents(userId: string): Record<ConsentKind, boolean> {
   const rows = getDb().prepare("SELECT kind, granted FROM consents WHERE user_id = ?").all(userId) as { kind: ConsentKind; granted: number }[];
-  const out = { health_data: false, cloud_ocr: false, scan_history: false };
+  const out = { health_data: false, cloud_ocr: false, scan_history: false, food_log: false };
   for (const r of rows) out[r.kind] = r.granted === 1;
   return out;
 }
@@ -137,6 +140,42 @@ export function listCorrections(userId: string) {
   return getDb().prepare("SELECT id, product_id AS productId, field, value, note, status, created_at AS createdAt FROM corrections WHERE user_id = ? ORDER BY created_at DESC").all(userId);
 }
 
+/* ---------------- food diary (encrypted; `day` kept in clear only to query by date) ---------------- */
+export function addFood(userId: string, e: DiaryEntryInput): DiaryEntry {
+  const id = newId();
+  const createdAt = new Date().toISOString();
+  getDb().prepare("INSERT INTO food_log (id, user_id, day, data_enc, created_at) VALUES (?, ?, ?, ?, ?)").run(id, userId, e.day, encryptJSON(e, AAD.food(userId)), createdAt);
+  return { id, createdAt, ...e };
+}
+export function listFood(userId: string, from: string, to: string): DiaryEntry[] {
+  const rows = getDb().prepare("SELECT id, data_enc, created_at FROM food_log WHERE user_id = ? AND day >= ? AND day <= ? ORDER BY day, created_at").all(userId, from, to) as { id: string; data_enc: string; created_at: string }[];
+  return rows.map((r) => ({ id: r.id, createdAt: r.created_at, ...decryptJSON<DiaryEntryInput>(r.data_enc, AAD.food(userId)) }));
+}
+export function getFood(userId: string, id: string): DiaryEntry | null {
+  const r = getDb().prepare("SELECT id, data_enc, created_at FROM food_log WHERE id = ? AND user_id = ?").get(id, userId) as { id: string; data_enc: string; created_at: string } | undefined;
+  return r ? { id: r.id, createdAt: r.created_at, ...decryptJSON<DiaryEntryInput>(r.data_enc, AAD.food(userId)) } : null;
+}
+export function updateFood(userId: string, id: string, e: DiaryEntryInput): boolean {
+  const res = getDb().prepare("UPDATE food_log SET day = ?, data_enc = ? WHERE id = ? AND user_id = ?").run(e.day, encryptJSON(e, AAD.food(userId)), id, userId) as { changes: number };
+  return res.changes > 0;
+}
+export function deleteFood(userId: string, id: string): boolean {
+  const res = getDb().prepare("DELETE FROM food_log WHERE id = ? AND user_id = ?").run(id, userId) as { changes: number };
+  return res.changes > 0;
+}
+export function clearFood(userId: string) {
+  getDb().prepare("DELETE FROM food_log WHERE user_id = ?").run(userId);
+  getDb().prepare("DELETE FROM diary_settings WHERE user_id = ?").run(userId);
+}
+export function getDiarySettings(userId: string): DiarySettings {
+  const r = getDb().prepare("SELECT data_enc FROM diary_settings WHERE user_id = ?").get(userId) as { data_enc: string } | undefined;
+  return r ? decryptJSON<DiarySettings>(r.data_enc, AAD.diary(userId)) : { energyTargetKcal: null };
+}
+export function setDiarySettings(userId: string, s: DiarySettings) {
+  getDb().prepare("INSERT INTO diary_settings (user_id, data_enc, updated_at) VALUES (?, ?, ?) ON CONFLICT(user_id) DO UPDATE SET data_enc = excluded.data_enc, updated_at = excluded.updated_at")
+    .run(userId, encryptJSON(s, AAD.diary(userId)), new Date().toISOString());
+}
+
 /* ---------------- export & deletion ---------------- */
 export function exportAll(userId: string) {
   const user = getDb().prepare("SELECT id, username, created_at AS createdAt FROM users WHERE id = ?").get(userId);
@@ -151,10 +190,11 @@ export function exportAll(userId: string) {
     scans: listScans(userId, 1000),
     comparisons: listComparisons(userId),
     corrections: listCorrections(userId),
+    foodDiary: { settings: getDiarySettings(userId), entries: listFood(userId, "0000-01-01", "9999-12-31") },
   };
 }
 
 export function deleteAccount(userId: string) {
-  // ON DELETE CASCADE removes sessions, profile, history, consents, settings, scans, comparisons, corrections
+  // ON DELETE CASCADE removes sessions, profile, history, consents, settings, scans, comparisons, corrections, food log
   getDb().prepare("DELETE FROM users WHERE id = ?").run(userId);
 }

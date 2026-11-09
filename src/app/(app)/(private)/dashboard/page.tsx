@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Columns2, ScanLine, Trash2 } from "lucide-react";
 import { useApp } from "@/components/AppProvider";
 import { AltList } from "@/components/ProductView";
+import { IntakeSummary } from "@/components/IntakeSummary";
 import { ProvBadge, Skeleton } from "@/components/ui";
 import { getLocalProduct, PRODUCTS } from "@/lib/catalogue";
 import { api } from "@/lib/client/api";
@@ -95,6 +96,8 @@ export default function Dashboard() {
           : chips.length ? <div className="chips">{chips.map((c) => <span key={c} className="chip" style={{ cursor: "default" }}>{c}</span>)}</div>
           : <p className="small">Your profile has no restrictions or goals set.</p>}
       </section>
+
+      <IntakeSummary />
 
       <section className="stack" aria-labelledby="recent-h">
         <div className="section-h"><h2 id="recent-h">{t("recentScans")}</h2><Link className="link small" href="/history">{t("navHistory")} →</Link></div>

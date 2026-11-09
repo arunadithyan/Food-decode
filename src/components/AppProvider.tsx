@@ -5,7 +5,7 @@ import type { Lang } from "@/lib/i18n/lessons";
 import { t as tr, type StringKey } from "@/lib/i18n/strings";
 import { emptyProfile, type HealthProfile } from "@/lib/profile";
 
-export interface Consents { health_data: boolean; cloud_ocr: boolean; scan_history: boolean }
+export interface Consents { health_data: boolean; cloud_ocr: boolean; scan_history: boolean; food_log: boolean }
 interface Me { user: { id: string; username: string }; settings: { language: Lang }; consents: Consents; hasProfile: boolean }
 
 interface Ctx {
@@ -38,7 +38,7 @@ const readLangCookie = (): Lang | null => {
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<Ctx["user"]>(undefined);
-  const [consents, setConsents] = useState<Consents>({ health_data: false, cloud_ocr: false, scan_history: false });
+  const [consents, setConsents] = useState<Consents>({ health_data: false, cloud_ocr: false, scan_history: false, food_log: false });
   const [lang, setLangState] = useState<Lang>("en");
   const [profile, setProfile] = useState<HealthProfile | null>(null);
   const [profileLoaded, setProfileLoaded] = useState(false);

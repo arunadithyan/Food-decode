@@ -3,6 +3,7 @@ import "server-only";
 import { NextResponse, type NextRequest } from "next/server";
 import { AuthError, SESSION_COOKIE, userForToken, type SessionUser } from "./auth";
 import { ProfileValidationError } from "../profile";
+import { ConfigError } from "./db";
 
 export class HttpError extends Error {
   constructor(public status: number, public code: string, message: string) {
@@ -60,7 +61,7 @@ export function handler<C = unknown>(fn: (req: NextRequest, ctx: C) => Promise<R
       if (e instanceof AuthError) return json({ error: e.code, message: e.message }, e.code === "rate_limited" ? 429 : e.code === "exists" ? 409 : e.code === "unauthorized" ? 401 : 400);
       if (e instanceof ProfileValidationError) return json({ error: "invalid_profile", message: "Some profile fields are not valid.", issues: e.issues }, 400);
       // Log only the error type and route — never the body, which may contain health data.
-      console.error(`[api] ${req.method} ${req.nextUrl.pathname} failed: ${(e as Error)?.name}`);
+      console.error(`[api] ${req.method} ${req.nextUrl.pathname} failed: ${(e as Error)?.name}${e instanceof ConfigError ? ` — ${e.message}` : ""}`);
       // Stack traces only when explicitly debugging locally; they never include request bodies.
       if (process.env.FD_DEBUG_ERRORS === "1") console.error((e as Error)?.stack);
       return json({ error: "server_error", message: "Something went wrong on our side." }, 500);

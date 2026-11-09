@@ -7,19 +7,20 @@ import "server-only";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { ConfigError } from "./db";
 
 let cachedKey: Buffer | null = null;
 
 export function dataKey(): Buffer {
   if (cachedKey) return cachedKey;
-  const env = process.env.FD_DATA_KEY;
+  const env = process.env.FD_DATA_KEY?.trim().replace(/^["']|["']$/g, "");
   if (env) {
     const k = Buffer.from(env, "base64");
-    if (k.length !== 32) throw new Error("FD_DATA_KEY must be 32 bytes, base64-encoded (run `npm run setup`).");
+    if (k.length !== 32) throw new ConfigError(`FD_DATA_KEY must be 32 bytes, base64-encoded (44 characters ending in "="); the value set decodes to ${k.length} bytes. Generate one with: node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"`);
     cachedKey = k;
     return k;
   }
-  if (process.env.NODE_ENV === "production") throw new Error("FD_DATA_KEY is not set. Run `npm run setup` or set it in the environment.");
+  if (process.env.NODE_ENV === "production") throw new ConfigError("FD_DATA_KEY is not set. Add it to the server's environment variables (see docs/DEPLOYMENT.md).");
   // Development convenience only: a local key file, never committed.
   const file = path.join(process.env.FD_PROJECT_ROOT || process.cwd(), ".data", "dev-data-key");
   fs.mkdirSync(path.dirname(file), { recursive: true, mode: 0o700 });

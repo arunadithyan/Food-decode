@@ -22,7 +22,8 @@
 | Data | review workflow for user corrections | ✗ reports are stored, no admin UI |
 | i18n | EN/HI/TA for core UI and all lessons | ◐ translations drafted, not reviewed by native speakers; engine explanations, product data and Ask answers are English |
 | PWA | manifest, service worker, offline OCR and lessons | ✅ (e2e scenario 8) |
-| Tests | unit, API integration, 8 e2e demo scenarios | ✅ (see TESTING.md) |
+| Tests | unit, API integration, 9 e2e scenarios | ✅ (see TESTING.md) |
+| Food diary | log from products or manually, daily calories eaten/left vs target, nutrient totals, 14-day history, on-track and logging streaks, edit/delete | ✅ |
 
 ## Limitations
 
@@ -37,6 +38,8 @@
 **Translations.** Hindi and Tamil were drafted for this project and need review by native-speaking nutrition educators. Only the scope listed above is translated; the app says so in Settings.
 
 **Security/operations.** Rate limiting is in memory (one process). No account recovery without email (by design — usernames only), no 2FA, manual key rotation. SQLite suits a single instance; scale-out needs Postgres. CSP allows inline scripts (required by Next.js without nonces).
+
+**Food diary.** Calorie targets default to the FSSAI 2,000 kcal label reference, which is a general value, not a personal requirement; users can set their own (800–6,000 kcal) or use a per-day limit from their profile. Totals are only as complete as what is logged, and home-cooked entries rely on the calories the user types. Manual entries are not translated. Days are the device's local date.
 
 **Offline.** Works for pages already cached, the catalogue, lessons and on-device OCR after one online use. The health profile is fetched from the server, so personal verdicts offline only work if the profile was loaded earlier in the session. Saving scans needs a connection.
 

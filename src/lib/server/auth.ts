@@ -36,7 +36,7 @@ export async function createUser(username: string, password: string): Promise<Se
     d.prepare("INSERT INTO users (id, username, password_hash, created_at) VALUES (?, ?, ?, ?)").run(id, username, hash, now);
     d.prepare("INSERT INTO settings (user_id, language, updated_at) VALUES (?, 'en', ?)").run(id, now);
     // privacy-first defaults: nothing optional is switched on
-    for (const kind of ["health_data", "cloud_ocr", "scan_history"]) d.prepare("INSERT INTO consents (user_id, kind, granted, updated_at) VALUES (?, ?, 0, ?)").run(id, kind, now);
+    for (const kind of ["health_data", "cloud_ocr", "scan_history", "food_log"]) d.prepare("INSERT INTO consents (user_id, kind, granted, updated_at) VALUES (?, ?, 0, ?)").run(id, kind, now);
   });
   return { id, username };
 }

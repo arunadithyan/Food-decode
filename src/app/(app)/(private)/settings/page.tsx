@@ -17,8 +17,9 @@ export default function SettingsPage() {
   const [typed, setTyped] = useState("");
   const [delErr, setDelErr] = useState<string | null>(null);
 
-  async function toggle(kind: "scan_history" | "cloud_ocr", v: boolean) {
+  async function toggle(kind: "scan_history" | "cloud_ocr" | "food_log", v: boolean) {
     if (kind === "scan_history" && !v && !confirm("Turning scan history off deletes your saved scans. Continue?")) return;
+    if (kind === "food_log" && !v && !confirm("Turning the food diary off deletes everything you have logged. Continue?")) return;
     try {
       await api("/api/settings", { method: "PUT", body: { consents: { [kind]: v } } });
       setConsentsLocal({ [kind]: v });
@@ -55,6 +56,7 @@ export default function SettingsPage() {
       <section className="card stack" aria-labelledby="priv-h">
         <h2 id="priv-h" className="h3">Privacy choices</h2>
         <label className="check"><input type="checkbox" checked={consents.scan_history} onChange={(e) => toggle("scan_history", e.target.checked)} data-testid="toggle-history" /><span><b>{t("scanHistoryToggle")}</b><br /><span className="small muted">Off by default. Saved scans are encrypted. Turning this off deletes them.</span></span></label>
+        <label className="check"><input type="checkbox" checked={consents.food_log} onChange={(e) => toggle("food_log", e.target.checked)} data-testid="toggle-diary" /><span><b>Keep my food diary</b><br /><span className="small muted">Off by default. Logs what you eat for daily calories and streaks (Profile → My intake). Encrypted. Turning this off deletes the diary.</span></span></label>
         <label className="check"><input type="checkbox" checked={consents.cloud_ocr} onChange={(e) => toggle("cloud_ocr", e.target.checked)} /><span><b>{t("cloudOcrToggle")}</b><br /><span className="small muted">Off by default. When on, you can choose “Online” on the scan screen; the photo is sent to the FoodDecode OCR server, read and discarded. On-device reading keeps photos on your phone.</span></span></label>
         <div className="small"><b>Health data consent:</b> {consents.health_data ? "given — " : "not given. "}{consents.health_data ? <Link className="link" href="/profile">withdraw by deleting your health profile</Link> : <Link className="link" href="/onboarding">add a profile</Link>}</div>
         {msg && <p className="small" role="status">{msg}</p>}

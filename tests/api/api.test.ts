@@ -87,7 +87,7 @@ describe("health profile CRUD, consent and history", () => {
   it("refuses to store health data without explicit consent (privacy-first default)", async () => {
     const c = await newUser("consent");
     const s = await c.req("GET", "/api/settings");
-    expect(s.json.consents).toEqual({ health_data: false, cloud_ocr: false, scan_history: false });
+    expect(s.json.consents).toEqual({ health_data: false, cloud_ocr: false, scan_history: false, food_log: false });
     expect((await c.req("PUT", "/api/profile", { profile: { allergies: { items: ["peanut"] } } })).status).toBe(403);
   });
   it("creates, reads, updates (with history), validates and deletes", async () => {
@@ -156,6 +156,42 @@ describe("scan history, comparisons, corrections, settings", () => {
     const c = await newUser("ocr");
     const res = await fetch(BASE + "/api/ocr/server", { method: "POST", headers: { Origin: ORIGIN, Cookie: c.cookie, "Content-Type": "image/png" }, body: new Uint8Array([137, 80, 78, 71]) });
     expect(res.status).toBe(403);
+  });
+});
+
+describe("food diary", () => {
+  const day = new Date().toISOString().slice(0, 10);
+  const item = { day, meal: "lunch", source: "manual", name: `dal ${MARKER}`, amount: 1, unit: "serving", nutrients: { energyKcal: 450, sodiumMg: 300 } };
+  it("is off by default, needs consent, then supports add / list / edit / delete", async () => {
+    const c = await newUser("diary");
+    expect((await c.req("GET", "/api/settings")).json.consents.food_log).toBe(false);
+    expect((await c.req("POST", "/api/diary", item)).status).toBe(403);
+    await c.req("PUT", "/api/settings", { consents: { food_log: true } });
+    const add = await c.req("POST", "/api/diary", item);
+    expect(add.status).toBe(201);
+    expect((await c.req("POST", "/api/diary", { ...item, nutrients: {} })).status).toBe(400);
+    const list = (await c.req("GET", "/api/diary")).json.entries;
+    expect(list).toHaveLength(1);
+    const id = add.json.entry.id;
+    expect((await c.req("PUT", `/api/diary/${id}`, { ...item, amount: 2, nutrients: { energyKcal: 900 } })).json.entry.nutrients.energyKcal).toBe(900);
+    expect((await c.req("PUT", "/api/diary/settings", { energyTargetKcal: 1800 })).json.settings.energyTargetKcal).toBe(1800);
+    expect((await c.req("PUT", "/api/diary/settings", { energyTargetKcal: 300 })).status).toBe(400);
+    expect(JSON.stringify((await c.req("GET", "/api/account/export")).json.foodDiary)).toContain(MARKER);
+    expect((await c.req("DELETE", `/api/diary/${id}`)).status).toBe(200);
+    expect((await c.req("GET", "/api/diary")).json.entries).toHaveLength(0);
+  });
+  it("is private to its owner and is deleted when switched off", async () => {
+    const a = await newUser("diary-a");
+    const b = await newUser("diary-b");
+    await a.req("PUT", "/api/settings", { consents: { food_log: true } });
+    await b.req("PUT", "/api/settings", { consents: { food_log: true } });
+    const id = (await a.req("POST", "/api/diary", item)).json.entry.id;
+    expect((await b.req("GET", "/api/diary")).json.entries).toEqual([]);
+    expect((await b.req("DELETE", `/api/diary/${id}`)).status).toBe(404);
+    expect((await b.req("PUT", `/api/diary/${id}`, item)).status).toBe(404);
+    await a.req("PUT", "/api/settings", { consents: { food_log: false } });
+    await a.req("PUT", "/api/settings", { consents: { food_log: true } });
+    expect((await a.req("GET", "/api/diary")).json.entries).toEqual([]);
   });
 });
 

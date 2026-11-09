@@ -7,6 +7,7 @@ import { useApp } from "./AppProvider";
 import { IngredientView, NutritionPanel, PortionControl, SourceBox, VerdictCard } from "./analysis";
 import { Banner, Disclaimer, ErrorState, PageSkeleton, ProvBadge, Sheet } from "./ui";
 import { useProduct } from "./useProduct";
+import { AteThis } from "./AteThis";
 import { PRODUCTS } from "@/lib/catalogue";
 import { api, ApiError } from "@/lib/client/api";
 import { defaultAmount, fmt, unitOf } from "@/lib/nutrition/calc";
@@ -117,6 +118,7 @@ export function ProductView({ id }: { id: string }) {
 
       <VerdictCard a={a} product={product} />
       <PortionControl product={product} amount={amount} setAmount={setAmount} />
+      <AteThis product={product} amount={amount} />
 
       {a.status !== "YES" && (
         <section className="stack" aria-labelledby="alt-h">

@@ -2,6 +2,8 @@
 
 Personalised, explainable food-label intelligence for Indian packaged foods. You scan a label (or look up a product), check the values the app read, and get a **YES / NO / CAUTION** answer for *your* allergies, diet, clinician-advised limits and goals, at the portion you actually eat. Every answer shows the rule and the numbers behind it.
 
+**Food diary (Profile → My intake):** log what you eat with “I ate this” on any product page or by hand (home-cooked food), see calories eaten and left for each day against your target (your own, your doctor’s, or the FSSAI 2,000 kcal reference), sugar/sodium/saturated-fat/protein/fibre totals, a 14-day history, and on-track and logging streaks. Off by default; encrypted; deleted when switched off.
+
 This is the full-stack upgrade of the FoodDecode prototype (a single static HTML page). It keeps the prototype's 28 products, label interpretation, portion engine, ingredient/INS explainer, comparison, Teach Me lessons, Ask FoodDecode and visual identity, and adds accounts, an encrypted health profile, a deterministic suitability engine, a much stronger OCR pipeline, Open Food Facts lookups, offline support and EN/HI/TA.
 
 > FoodDecode explains labels. It does not diagnose, treat, or replace a doctor or dietitian.
@@ -34,10 +36,10 @@ Password for all: **`FoodDecode-demo-2026`**
 
 | Username | Profile | Try |
 |---|---|---|
-| `demo.general` | no restrictions | Maggi → YES |
+| `demo.general` | no restrictions; food diary on with 5 synthetic days | Maggi → YES; Profile → My intake shows a 4-day streak |
 | `demo.peanut` | peanut + tree-nut allergy | Maggi → **NO** (lists hydrolysed groundnut protein) |
 | `demo.diabetes` | vegetarian, diabetes, monitors carbs, reduce sugar | Coca-Cola → CAUTION, alternative Coke Zero |
-| `demo.bp` | high blood pressure, reduce sodium, clinician-advised 1,500 mg/day sodium | Haldiram's Aloo Bhujia: 30 g YES → 90 g CAUTION, alternative Bingo |
+| `demo.bp` | high blood pressure, reduce sodium, clinician-advised 1,500 mg/day sodium; food diary on | Haldiram's Aloo Bhujia: 30 g YES → 90 g CAUTION, alternative Bingo; “I ate this” |
 | `demo.jain` | Jain diet, lactose intolerance (scan history off) | Maggi → NO (onion, garlic) |
 
 ## Scripts

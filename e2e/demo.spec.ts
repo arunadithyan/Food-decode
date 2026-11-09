@@ -158,3 +158,33 @@ test("8 · offline fallback: on-device OCR and cached pages work without a netwo
   await expect(page.getByTestId("lesson")).toContainText("2.5");
   await context.setOffline(false);
 });
+
+test("9 · food diary: log a product and a home meal, see what is left and the streak", async ({ page }) => {
+  page.on("dialog", (d) => d.accept());
+  await login(page, "demo.bp");
+  await page.goto("/profile");
+  await expect(page.getByTestId("intake-summary")).toBeVisible();
+  // log 30 g of namkeen from its product page
+  await page.goto("/product/haldiram-aloo-bhujia?amount=30");
+  await verdict(page);
+  await page.getByTestId("ate-this").click();
+  await expect(page.getByTestId("ate-msg")).toContainText("Added 30 g");
+  await page.getByRole("link", { name: "See my intake →" }).click();
+  await page.waitForURL("**/profile/intake");
+  const before = Number((await page.getByTestId("kcal-eaten").innerText()).replace(/[^\d.]/g, ""));
+  // add a home-cooked meal by hand
+  await page.getByTestId("add-food").click();
+  await page.getByRole("button", { name: /Enter manually/ }).click();
+  await page.getByTestId("manual-name").fill("2 chapatis with dal");
+  await page.getByTestId("manual-kcal").fill("420");
+  await page.getByTestId("manual-submit").click();
+  await expect(page.getByText("2 chapatis with dal")).toBeVisible();
+  const after = Number((await page.getByTestId("kcal-eaten").innerText()).replace(/[^\d.]/g, ""));
+  expect(after - before).toBeCloseTo(420, 0);
+  await expect(page.getByTestId("kcal-left")).toContainText(/kcal (left|over)/);
+  // the seeded synthetic days before today were on track
+  expect(Number((await page.getByTestId("streak-on-track").innerText()).match(/\d+/)![0])).toBeGreaterThanOrEqual(4);
+  // previous day navigation works
+  await page.getByRole("button", { name: "Previous day" }).click();
+  await expect(page.getByTestId("intake-day")).toHaveText("Yesterday");
+});

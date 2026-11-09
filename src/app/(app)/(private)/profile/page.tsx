@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { History, Trash2 } from "lucide-react";
 import { useApp } from "@/components/AppProvider";
+import { IntakeSummary } from "@/components/IntakeSummary";
 import { cleanProfile, ProfileEditor, summariseChange } from "@/components/ProfileEditor";
 import { Banner, PageSkeleton, Sheet } from "@/components/ui";
 import { api, ApiError } from "@/lib/client/api";
@@ -62,6 +63,11 @@ export default function ProfilePage() {
         <h1>{t("myProfile")}</h1>
         <p className="lede">{t("profileIntro")}</p>
       </div>
+      <div className="tabs-row" role="navigation" aria-label="Profile sections">
+        <span className="chip" aria-current="page" style={{ background: "var(--teal)", color: "#fff", borderColor: "var(--teal)" }}>Health profile</span>
+        <Link href="/profile/intake" className="chip" data-testid="tab-intake">My intake</Link>
+      </div>
+      <IntakeSummary />
       <Banner kind="info">{t("notMedical")}</Banner>
       <section className="card">
         <ProfileEditor value={draft} onChange={setDraft} sections={["diet", "allergies", "conditions", "goals", "basics", "notes"]} />

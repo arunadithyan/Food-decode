@@ -23,15 +23,29 @@ export function dbPath(): string {
   return process.env.FD_DB_PATH || path.join(root(), ".data", "fooddecode.db");
 }
 
+/** A deployment/configuration problem. Its message is safe to log (it never contains request data). */
+export class ConfigError extends Error {
+  name = "ConfigError";
+}
+
 export function getDb(): DB {
   if (g.__fdDb) return g.__fdDb;
   // Loaded at runtime (Node >= 22.3) so the bundler leaves the built-in module alone.
   const { DatabaseSync } = (process as unknown as { getBuiltinModule(id: string): unknown }).getBuiltinModule("node:sqlite") as { DatabaseSync: new (p: string) => DB };
   const file = dbPath();
-  fs.mkdirSync(path.dirname(file), { recursive: true, mode: 0o700 });
-  const db = new DatabaseSync(file);
-  db.exec("PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;");
-  migrate(db);
+  let db: DB;
+  try {
+    fs.mkdirSync(path.dirname(file), { recursive: true, mode: 0o700 });
+    db = new DatabaseSync(file);
+    db.exec("PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;");
+  } catch (e) {
+    throw new ConfigError(`Cannot open the database at ${file} (${(e as NodeJS.ErrnoException).code || (e as Error).message}). If FD_DB_PATH points to a mounted disk, check that the disk exists and is mounted at that folder; otherwise remove FD_DB_PATH.`);
+  }
+  try {
+    migrate(db);
+  } catch (e) {
+    throw new ConfigError(`Database migration failed: ${(e as Error).message}. Is the db/migrations folder deployed?`);
+  }
   g.__fdDb = db;
   return db;
 }
